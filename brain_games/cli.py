@@ -1,7 +1,13 @@
 import prompt
 
 
-def welcome_user():
-    print("Welcome to the Brain Games!", end="\n\n")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
+def welcome_user(game_rules: str = None) -> str:
+    print("Welcome to the Brain Games!")
+
+    if game_rules:
+        print(game_rules)
+
+    name = prompt.string("\nMay I have your name? ")
+    print(f"Hello, {name}!", end="\n\n")
+
+    return name
