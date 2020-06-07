@@ -1,7 +1,6 @@
 language: python
 python:
-  # we want to test our package on several versions of Python
-  - 3.6
+  # we want to test our package on several versions of Python:
   - 3.7
   - 3.8
 
@@ -9,5 +8,8 @@ before_install:
   # make depends on poetry
   - pip install poetry
 
-run_linter:
+install:
+  - make install
+
+script:
   - make lint
