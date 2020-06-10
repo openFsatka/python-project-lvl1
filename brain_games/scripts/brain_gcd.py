@@ -1,5 +1,5 @@
 from brain_games.cli import run_game
-from brain_games.games.parity_check import (
+from brain_games.games.gcd import (
     get_correct_answer,
     get_question,
     GAME_RULES
